@@ -1,4 +1,9 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import CryptoList from "./components/CryptoList";
+import AddCryptoForm from "./components/AddCryptoForm";
+import About from "./components/About";
 import './App.css';
 
 function App() {
