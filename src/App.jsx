@@ -7,6 +7,18 @@ import About from "./components/About";
 import './App.css';
 
 function App() {
+  const [cryptos, setCryptos] = useState([]);
+
+  useEffect(()=>{
+    fetch(`${process.env.REACT_APP_API_URL}/cryptos`)
+    .then(res=>res.json())
+    .then(date=> setCryptos(data));
+  }, []);
+    const addCrytpo = (newCrypto) => {
+      setCryptos([...cryptos, newCrypto]);
+    };
+
+
   return (
     <div className="App">
       <header className="App-header">
