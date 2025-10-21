@@ -12,7 +12,7 @@ function App() {
   useEffect(()=>{
     fetch(`${process.env.REACT_APP_API_URL}/cryptos`)
     .then(res=>res.json())
-    .then(date=> setCryptos(data));
+    .then(data=> setCryptos(data));
   }, []);
     const addCrytpo = (newCrypto) => {
       setCryptos([...cryptos, newCrypto]);
@@ -42,7 +42,7 @@ function App() {
       </Routes>
      
     </Router> 
-  )
+  );
 }
 
 export default App;
